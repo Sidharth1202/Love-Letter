@@ -43,15 +43,13 @@ button:hover{
 }
 
 .letter{
-    width:600px;
-    max-width:90%;
-    background:white;
-    padding:35px;
+    width:90%;
+    max-width:700px;
+    margin:20px auto;
+    padding:25px;
+    background:#1f1f1f;
     border-radius:20px;
-    box-shadow:0 20px 40px rgba(0,0,0,.3);
-    margin-top:25px;
-    display:none;
-    animation:fade 1s;
+    box-shadow:0 0 20px rgba(0,0,0,.4);
 }
 
 h1{
@@ -106,6 +104,32 @@ transform:translateY(100vh) scale(.5);
 100%{
 transform:translateY(-120vh) scale(1.5);
 }
+}
+
+@media (max-width:768px){
+
+body{
+    padding:15px;
+}
+
+.letter{
+    width:100%;
+    padding:20px;
+}
+
+h1{
+    font-size:32px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.sign{
+    font-size:24px;
+}
+
 }
 </style>
 

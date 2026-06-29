@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter For You ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    overflow:hidden;
+}
+
+.container{
+    text-align:center;
+}
+
+button{
+    padding:15px 35px;
+    font-size:20px;
+    border:none;
+    border-radius:40px;
+    background:#ff3366;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.letter{
+    width:600px;
+    max-width:90%;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+    margin-top:25px;
+    display:none;
+    animation:fade 1s;
+}
+
+h1{
+    color:#ff3366;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+    text-align:left;
+}
+
+.sign{
+    margin-top:25px;
+    text-align:right;
+    color:#ff3366;
+    font-size:22px;
+    font-weight:bold;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+}
+
+.heart{
+    position:absolute;
+    color:red;
+    animation:float 8s linear infinite;
+    opacity:.7;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh) scale(.5);
+}
+100%{
+transform:translateY(-120vh) scale(1.5);
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="container">
+
+<button onclick="showLetter()">💌 Open My Letter ❤️</button>
+
+<div class="letter" id="letter">
+
+<h1>To My Special One (Akku) ❤️</h1>
+
+<p>
+
+Dear <b>Ankita Sharma</b>,
+
+<br><br>
+
+You've met me only twice so far, and both times have become really special memories for me , once with our friends and once today, just the two of us.
+I want to sincerely thank Puja and Kushank for bringing us together, but most of all, thank you for taking an interest in me.
+
+<br><br>
+
+I know that because of your past, it's not easy for you to open up quickly, and that's completely okay, Akku. I understand, and I'll always respect your pace.
+
+<br><br>
+
+If I ever seem a little annoying by asking about your feelings again and again, please don't mind it, Buggu. I only ask because I want to know that you're okay with me, comfortable with me, and happy around me.
+
+<br><br>
+
+Thank you for meeting me today. We spent such a beautiful and special time together, and I'll always cherish it.
+
+<br><br>
+
+Thank you for being there.
+
+❤️
+
+</p>
+
+<div class="sign">
+With Love,<br>
+Your Sidharth ❤️
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function showLetter(){
+document.getElementById("letter").style.display="block";
+}
+
+const hearts=document.getElementById("hearts");
+
+for(let i=0;i<35;i++){
+
+const heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"%";
+heart.style.fontSize=(15+Math.random()*25)+"px";
+heart.style.animationDuration=(5+Math.random()*6)+"s";
+heart.style.animationDelay=Math.random()*5+"s";
+
+hearts.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
